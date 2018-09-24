@@ -1,0 +1,217 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+a:hover {
+	color: #fdf208;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+body{
+    background-color:#f9f9f9; 
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+}
+header{
+    background:url(img/Template.jpg) center center no-repeat;
+    background-size: cover;
+    color:#fff;
+    text-align:center;
+    margin:0;
+    padding:135px 20px 95px 20px;
+   
+}
+header h1{
+   font-family: 'Raleway', sans-serif;
+   font-size:60px;
+   margin-bottom:40px;
+   padding:0;
+}
+header h3{
+   font-family:'Open Sans', sans-serif;
+   font-style:italic;
+   font-size:18px;
+   margin-bottom:60px;
+   padding:0;
+}
+header p{
+   font-family:'Open Sans', sans-serif;
+   font-size:12px;
+    margin:0;
+   margin-top:20px;
+   padding:0;
+}
+.subscribe{
+    background:rgba(0,0,0,0.65);
+    display:table;
+    margin:0 auto;
+    padding:15px 20px 15px 20px;
+    border-radius:5px;
+    }
+.subscribe:last-child{
+    margin-bottom:50px;
+}
+.subscribe input{
+    float:left;
+}
+.subscribe input[type="text"],
+.subscribe input[type="email"]{
+    border:none;
+    width:320px;
+    box-sizing:border-box;
+    padding:19px 20px 19px 20px;
+    margin-right:10px;
+    font-size:16px;
+    }
+.subscribe input[type="button"]{
+    width:220px;
+    background-color:#ae2c52;
+    color:#fff;
+    border:none;
+    font-family:'Open Sans', sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    padding:15px 30px 15px 45px;
+    cursor:pointer;
+    box-sizing:border-box;
+}
+article{
+    max-width:880px;
+    margin:0 auto;
+    padding:110px 20px 40px 20px;
+    
+}
+article h2{
+    font-family:'Open Sans', sans-serif;
+    font-weight: lighter;
+    text-align:center;
+    font-size:48px;
+    }
+article p {
+    font-family:'Open Sans', sans-serif;
+    font-weight:lighter;
+    font-size:15px;
+}
+article p:first-of-type{
+    margin-top:40px;
+    margin-bottom:50px;
+}
+article img{
+    float:left;
+    margin-top:35px;
+    margin-right:30px;
+}
+@media screen and (max-width:960px){
+    .subscribe input[type="text"],
+    .subscribe input[type="email"]{
+        width:260px;
+    }
+}
+@media screen and (max-width:840px){
+    .subscribe input[type="text"],
+    .subscribe input[type="email"]{
+        width:320px;
+        float:none;
+        display:block;
+        margin-right:0;
+        margin-bottom:10px;
+    }
+    header {
+        padding:30px 20px;
+    }
+    header h1{
+  font-size:44px;
+   margin-bottom:20px;
+ }
+    header h3 {
+        margin-bottom:20px;
+    }
+}
+@media screen and (max-width:400px){
+    .subscribe input[type="text"],
+    .subscribe input[type="email"]{
+        width:240px;
+    }
+}
